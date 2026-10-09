@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="registration-page" data-form-version="1.0">
+    <section class="registration-panel" aria-labelledby="registration-title">
+      <div class="registration-brand">
+        <div class="registration-mark" aria-hidden="true">SR</div>
+        <div>
+          <p class="registration-eyebrow">STUDENT SERVICES</p>
+          <h1 id="registration-title">Student Registration</h1>
+        </div>
+      </div>
+
+      <p class="registration-intro">Complete the form below to register your student information. Fields marked with <span class="required-indicator">*</span> are required.</p>
+
+      <div id="registration-success" class="registration-success" role="status" aria-live="polite"></div>
+
+      <form id="student-registration-form" novalidate>
+        <div class="registration-section">
+          <span class="registration-section-number">01</span>
+          <div>
+            <h2>Personal Information</h2>
+            <p>Tell us about yourself.</p>
+          </div>
+        </div>
+
+        <div class="registration-grid">
+          <div class="registration-field">
+            <label for="student-id">Student ID <span class="required-indicator">*</span></label>
+            <input id="student-id" name="studentId" type="text" placeholder="e.g. 2026-00123" autocomplete="off" data-field="student-id" data-trim="true" data-label="Student ID" data-hint="Enter your school-issued ID, for example 2026-00123." data-error="Please enter your student ID." aria-describedby="student-id-error">
+            <small class="field-error" id="student-id-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="full-name">Full Name <span class="required-indicator">*</span></label>
+            <input id="full-name" name="fullName" type="text" placeholder="Enter your full name" autocomplete="name" data-field="full-name" data-trim="true" data-error="Please enter your full name." aria-describedby="full-name-error">
+            <small class="field-error" id="full-name-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="email-address">Email Address <span class="required-indicator">*</span></label>
+            <input id="email-address" name="email" type="email" placeholder="you@example.com" autocomplete="email" data-field="email" data-trim="true" data-error="Please enter your email address." aria-describedby="email-address-error">
+            <small class="field-error" id="email-address-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="phone-number">Phone Number <span class="required-indicator">*</span></label>
+            <input id="phone-number" name="phone" type="tel" placeholder="09XXXXXXXXX" autocomplete="tel" inputmode="tel" data-field="phone" data-trim="true" data-error="Please enter your phone number." aria-describedby="phone-number-error">
+            <small class="field-hint">Use 09XXXXXXXXX or +639XXXXXXXXX.</small>
+            <small class="field-error" id="phone-number-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="date-of-birth">Date of Birth <span class="required-indicator">*</span></label>
+            <input id="date-of-birth" name="dob" type="date" data-field="date-of-birth" data-error="Please select your date of birth." aria-describedby="date-of-birth-error">
+            <small class="field-error" id="date-of-birth-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label>Gender <span class="required-indicator">*</span></label>
+            <div class="registration-radio-group" id="gender-options" data-field="gender" data-error="Please select your gender." role="group" aria-describedby="gender-options-error">
+              <label class="registration-radio-option"><input type="radio" name="gender" value="Female"> <span>Female</span></label>
+              <label class="registration-radio-option"><input type="radio" name="gender" value="Male"> <span>Male</span></label>
+              <label class="registration-radio-option"><input type="radio" name="gender" value="Prefer not to say"> <span>Prefer not to say</span></label>
+            </div>
+            <small class="field-error" id="gender-options-error"></small>
+          </div>
+        </div>
+
+        <div class="registration-section registration-section--spaced">
+          <span class="registration-section-number">02</span>
+          <div>
+            <h2>Academic Information</h2>
+            <p>Choose your current program and year level.</p>
+          </div>
+        </div>
+
+        <div class="registration-grid">
+          <div class="registration-field">
+            <label for="study-program">Program <span class="required-indicator">*</span></label>
+            <select id="study-program" name="program" data-field="program" data-error="Please select your program." aria-describedby="study-program-error">
+              <option value="">Select a program</option>
+              <option value="BS Information Technology">BS Information Technology</option>
+              <option value="BS Computer Science">BS Computer Science</option>
+              <option value="BS Information Systems">BS Information Systems</option>
+              <option value="BS Business Administration">BS Business Administration</option>
+              <option value="Bachelor of Elementary Education">Bachelor of Elementary Education</option>
+              <option value="Bachelor of Secondary Education">Bachelor of Secondary Education</option>
+            </select>
+            <small class="field-error" id="study-program-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="year-level">Year Level <span class="required-indicator">*</span></label>
+            <select id="year-level" name="yearLevel" data-field="year-level" data-error="Please select your year level." aria-describedby="year-level-error">
+              <option value="">Select a year level</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+              <option value="5th Year">5th Year</option>
+            </select>
+            <small class="field-error" id="year-level-error"></small>
+          </div>
+        </div>
+
+        <div class="registration-section registration-section--spaced">
+          <span class="registration-section-number">03</span>
+          <div>
+            <h2>Account and Contact</h2>
+            <p>Create a password and enter your address.</p>
+          </div>
+        </div>
+
+        <div class="registration-grid">
+          <div class="registration-field">
+            <label for="account-password">Password <span class="required-indicator">*</span></label>
+            <div class="registration-password-field">
+              <input id="account-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" data-field="password" data-error="Please enter a password." aria-describedby="account-password-error">
+              <button class="registration-password-toggle" id="toggle-password-visibility" type="button" data-target="account-password" aria-pressed="false">Show</button>
+            </div>
+            <small class="field-error" id="account-password-error"></small>
+          </div>
+
+          <div class="registration-field">
+            <label for="confirm-password">Confirm Password <span class="required-indicator">*</span></label>
+            <input id="confirm-password" name="confirmPassword" type="password" placeholder="Re-enter your password" autocomplete="new-password" data-field="confirm-password" data-error="Please confirm your password." aria-describedby="confirm-password-error">
+            <small class="field-error" id="confirm-password-error"></small>
+          </div>
+
+          <div class="registration-field registration-field--full">
+            <label for="home-address">Home Address <span class="required-indicator">*</span></label>
+            <textarea id="home-address" name="address" rows="3" placeholder="House number, street, barangay, city or municipality" autocomplete="street-address" data-field="address" data-trim="true" data-error="Please enter your home address." aria-describedby="home-address-error"></textarea>
+            <small class="field-error" id="home-address-error"></small>
+          </div>
+        </div>
+
+        <div class="registration-agreement">
+          <label class="registration-agreement-row" for="registration-agreement">
+            <input id="registration-agreement" name="agreement" type="checkbox" data-field="agreement" data-error="You must agree before registering." aria-describedby="registration-agreement-error">
+            <span>I confirm that the information I provided is correct and agree to the use of my information for student registration.</span>
+          </label>
+          <small class="field-error" id="registration-agreement-error"></small>
+        </div>
+
+        <div class="registration-actions">
+          <button class="registration-reset" type="reset" id="reset-registration-form">Reset Form</button>
+          <button class="registration-submit" type="submit">Submit Registration <span aria-hidden="true">→</span></button>
+        </div>
+        
+      </form>
+    </section>
+    <footer class="registration-footer">WS 301 · Form Validation Performance Task by Jelyn Betco</footer>
+  </main>
+</body>
+</html>
